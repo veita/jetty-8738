@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+
+<Configure class="org.eclipse.jetty.server.handler.ContextHandler">
+  <Call id="res" class="org.eclipse.jetty.util.resource.Resource" name="newResource">
+    <Arg>/tmp/</Arg>
+  </Call>
+  <Set name="contextPath">temp</Set>
+  <Set name="baseResource">
+     <Ref refid="base"/>
+  </Set>
+
+  <Set name="handler">
+    <New class="org.eclipse.jetty.server.handler.ResourceHandler" />
+  </Set>
+</Configure>
